@@ -1,3 +1,13 @@
 FROM mcr.microsoft.com/devcontainers/rust:0-1-bullseye
 
-RUN bash ./setup.sh
+RUN apt-get update && \
+    apt-get install -y \
+    vim \
+    tig \
+    curl \
+    wget \
+    unzip \
+    zip \
+    gcc \ 
+    gdb \
+    make
